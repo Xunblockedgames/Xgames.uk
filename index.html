@@ -2,11 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xgames</title>
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav img {
+            height: 40px;
+        }
+        nav h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .featured {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .popular-games {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .game-column {
+            flex: 1;
+        }
+        .game-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .game-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .game-card .play-button {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -14,58 +76,26 @@
         <h1>Xgames</h1>
     </nav>
 
-    <div class="featured">
-        <h1 style="color:black;">These games are not made by me</h1>
-        <div class="popular-games">
-            <h2>Popular:</h2>
-            <div class="game-column">
-                <a href="games/bob-the-robber-2/">
-                    <img src="images/bob-the-robber-2.png" alt="Bob the Robber 2">
-                    <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
+    <div class="container">
+        <div class="featured">
+            <h2 style="color:black;">These games are not made by me</h2>
+            <div class="popular-games">
+                <div class="game-column">
+                    <div class="game-card">
+                        <a href="games/bob-the-robber-2/">
+                            <img src="images/bob-the-robber-2.png" alt="Bob the Robber 2">
+                            <div class="play-button">
+                                <i class="fa-solid fa-play"></i> Play
+                            </div>
+                        </a>
                     </div>
-                </a>
-                <a href="games/vex7/">
-                    <img src="images/vex7.jpeg" alt="Vex 7">
-                    <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                </a>
-                <a href="games/vex6">
-                    <img src="images/vex6.jpeg" alt="Vex 6">
-                    <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="game-column">
-                <a href="games/moto-x3m/">
-                    <img src="images/moto-x3m.jpg" alt="Moto X3M">
-                    <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                </a>
-                <a href="games/retro-bowl/">
-                    <img src="images/retro-bowl.jpg" alt="Retro Bowl">
-                    <div class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                </a>
+                    <!-- Add other game cards here -->
+                </div>
+                <!-- Add more columns if needed -->
             </div>
         </div>
-    </div>
 
-    <div class="content">
-        <hr>
-        <div class="search">
-            <input type="text" placeholder="Search..." oninput="">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-
-        <div id="games">
-            <a href="games/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="Bob the Robber 2"></a>
-            <!-- Include other game links here -->
-        </div>
+        <!-- Add more content here -->
     </div>
 
     <script src="script.js"></script>
